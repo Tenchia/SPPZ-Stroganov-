@@ -1,7 +1,6 @@
 import os
 from tkinter import *
 from tkinter import messagebox
-from datetime import *
 
 ##############################################################
 root = Tk()
@@ -22,21 +21,8 @@ Label2.place(x=0,y=50)
 timeout_entry = Entry(textvariable=timeout)
 timeout_entry.place(x=120,y=0)
 
-hour_checkbutton = Radiobutton(text = "Hours", value=1, variable=type)
-hour_checkbutton.pack()
-hour_checkbutton.place(x=120, y=160)
-
-minute_checkbutton = Radiobutton(text = "Minutes", value=2, variable=type)
-minute_checkbutton.pack()
-minute_checkbutton.place(x=120, y=190)
-
-seconds_checkbutton = Radiobutton(text = "Seconds", value=3, variable=type)
-seconds_checkbutton.pack()
-seconds_checkbutton.place(x=120, y=220)
-
-
 def show_message():
-    messagebox.showinfo("GUI Python", timeout.get())
+    messagebox.showinfo("Timeout", timeout.get())
 
 def click_button():
     os.system("shutdown /s /t " + str(timeout.get()))
