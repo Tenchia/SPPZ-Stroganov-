@@ -18,7 +18,7 @@ Label2 = Label(text="Test button:")
 Label2.pack()
 Label2.place(x=0,y=50)
 
-timeout_entry = Entry(textvariable=timeout)
+timeout_entry = Entry(textvariable=timeout)#
 timeout_entry.place(x=120,y=0)
 
 def show_message():
